@@ -84,3 +84,41 @@ newFunction();
 console.log(typeof newFunction); //function (but called it object function)
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3 (check typeof )
+
+
+//stack and heap memory
+
+//1. stack memory used for -  Primitive Data Type
+//2. It return the copy of original value .. Original value doesn't change
+
+//1. heap memory used for - Reference data type or Non-Primitive Data Type
+//2. it return the refernce of the original value
+
+//example of stack
+
+let myOriginalName = "Ajay Gupta";
+
+let myNickName = myOriginalName;
+myNickName = "Rocky Gupta"
+console.log(myOriginalName);
+console.log(myNickName);
+
+//Example of Heap
+
+let profileName = {
+    name: "ajay",
+    email: "test@test.com"
+}
+
+console.log(profileName);
+
+let ProfileId = profileName;
+console.log(ProfileId);
+
+profileName.email = "ajay@test.com";
+ProfileId.name = "Rocks"
+
+console.log(ProfileId);
+console.log(profileName);
+
+
